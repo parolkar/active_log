@@ -8,7 +8,7 @@ module ParolkarInnovationLab
       def records_active_log(arg_hash={}) 
               include ParolkarInnovationLab::SocialNet::InstanceMethods
               before_save :record_changes_for_active_log
-              after_save :save_active_log
+              after_save :save_active_log    
               has_many :active_logs, :as => :ar
       end
     end  
@@ -17,7 +17,6 @@ module ParolkarInnovationLab
       private
         def record_changes_for_active_log
           @copy_of_changes = changes
-          #puts "#{Yaml.dump(@copy_of_changes)}"
         end
         def save_active_log
           log = ActiveLog.new
