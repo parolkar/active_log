@@ -19,7 +19,7 @@ You can access logs either by user or all...
 <pre>
 	>>u = User.first
 	>>u.active_logs
-	=> [#<ActiveLog id: 1, type: nil, ar_id: 1, ar_type ... ]
+	=> [...]
 	
 	or
 	
